@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Neuton&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/65cb952072.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+        <div class="container-fluid">
+
+                <div class="clearfix">
+                
+
+                
+                    <div id="brand" class="float-left ml-sm-3">
+                        <img src="img/logo-petit.JPG" class="float-sm-left">
+                        <h1 class="nom-llibreria d-none d-sm-block">El Magatzem <br>de llibres</h1>
+                    </div>
+                
+                
+                
+                    <div class="modals-dreta float-right mr-sm-3">
+                        <div class="flex pt-2">
+                            <a href="#" class="pencil-registre d-flex justify-content-end" data-toggle="modal" data-target="#login">
+                                <i class="fas fa-user"> Accedeix</i>
+                            </a>
+                        </div>
+                        <!-- The Modal -->
+                        <div class="modal" id="login">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Accedeix</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <form action="" class="main-form">
+                                            <div class="form-group">
+                                                <label for="emailLogin">Email</label>
+                                                <input type="email" name="email" id="emailLogin" class="form-control">
+                                                <span id="mensajeErrorEmail1" class="hint"></span>
+                                            </div>
+                
+                                            <div class="form-group">
+                                                <label for="passwordLogin">Password</label>
+                                                <input type="password" name="password" id="passwordLogin" class="form-control">
+                                                <span id="mensajeErrorPassword" class="hint"></span>
+                                            </div>
+                
+                                            <button type="submit" id="enviarLogin" class="btn btn-outline-primary">Submit</button>
+                                        </form>
+                
+                                    </div>
+                
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div>
+                
+                
+                
+                        <div class="flex pt-2">
+                            <a href="#registrat" class="pencil-registre d-flex justify-content-end">
+                                <i class="fa fa-pencil-alt" aria-hidden="true"> Registra't</i>
+                            </a>
+                        </div>
+                
+                        <div class="flex pt-2">
+                            <a href="#" class="pencil-registre d-flex justify-content-end" data-toggle="modal" data-target="#buscarModal">
+                                <i class="fa fa-search form-control-feedback" aria-hidden="true"> Buscar</i>
+                            </a>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="buscarModal" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">BUSCAR</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" method="get" class="main-form">
+                                            <div class="form-group">
+                                                <label for="buscar"></label>
+                                                <span id="mysearchhint" class="hint"></span>
+                                                <input type="search" name="buscar" id="buscar" class="form-control" min="4" var
+                                                    result=selectElt.checkValidity();required>
+                                            </div>
+                                            <button type="submit" id="enviarSearch" class="btn btn-outline-primary">Buscar</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end myModal-->
+                
+                    </div>
+                    <!--end modals-dreta-->
+                
+                </div>
+                <!--end clearfix-->
+
+
+
+               
+            
+        </div><!--end container fluid-->
+        
+
+        <nav class="navbar navbar-expand-sm bg-light">
+            <ul class="navbar-nav ml-sm-3">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inici</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                    <!--dropdown-->
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Novel·la</a>
+                            <a class="dropdown-item" href="#">Ciències socials</a>
+                            <a class="dropdown-item" href="#">Infantil i juvenil</a>
+                            <a class="dropdown-item" href="#">Cinema</a>
+                            <a class="dropdown-item" href="#">Cuina i viatges</a>
+                            <a class="dropdown-item" href="#">Tècnics</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#novetats">Novetats</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#agenda">Agenda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacte</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="jumbotron text-center">
+                <!-- Button to Open the Modal -->
+                <div id="agenda-sidebar" class="float-sm-right text-left">
+                    <h3 class="text-center">Agenda</h3>
+                    <p>DIJOUS 13 JUNY</p>
+                    <a class="agenda-link" href="#" data-toggle="modal" data-target="#myModal1">Dona dels Nassos</a>
+                    <hr>
+                    <p>DISSABTE 15 JUNY</p>
+                    <a class="agenda-link" href="#" data-toggle="modal" data-target="#myModal2">Ruta literària <br>"La vaga de la Canadenca" <br>amb Ferran Aisa</a>
+
+                </div>
+
+                <!-- The Modal1 -->
+                <div class="modal" id="myModal1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">DIJOUS 12 JUNY</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <h3>Dona dels nassos</h3> 
+                                <img src="img/donanassos.JPG" class="img-thumbnail w-50" alt="Cinque Terre">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse nulla, facere delectus nihil praesentium sint. Voluptatibus at odio numquam modi!</p>
+                                <a href="#">Llegir més...</a>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--end modal-->
+                <!-- The Modal2 -->
+                <div class="modal" id="myModal2">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+    
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">DISSABTE 15 JUNY</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+    
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <h3>Ruta literària "La vaga de la Canadenca amb Ferran Aisa</h3> 
+                                    <img src="img/vagacanadenca.JPG" class="img-thumbnail w-50" alt="Cinque Terre">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse nulla, facere delectus nihil praesentium sint. Voluptatibus at odio numquam modi!</p>
+                                    <a href="#">Llegir més...</a>
+                                </div>
+    
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div><!--end modal-->
+    
+                
+
+                
+                
+                <div class="container">
+                        <h1 class="mb-3">Destacats</h1>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="img-fluid" src="img/cretins-jumbo.png" alt="Mil cretins">
+                                <h3 class="titol">Mil cretins</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                <p>15,55 <a href="#"><i class="fas fa-cart-arrow-down"></i></a></p>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="img-fluid" src="img/frankenstein-jumbo.png" alt="Chania">
+                                <h3 class="titol">Frankenstein</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                <p>10,25 <a href="#"><i class="fas fa-cart-arrow-down"></i></a></p>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="img-fluid" src="img/fungus-jumbo.png" alt="Chania">
+                                <h3 class="titol">Fungus</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                <p>20,50 <a href="#"><i class="fas fa-cart-arrow-down"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+            
+
+        </div><!-- end jumbotron-->
+
+     
+        <section id="novetats">
+            
+            <div class="container text-center">
+                <h1 class="mb-3">Novetats</h1>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <img src="img/cuadepalla.png" class="w-50" alt="Cinque Terre">
+                        <h3>El pispa</h3>
+                        <p>Ed McBain</p>
+                        <p>10,25 <a href="#"><i class="fas fa-cart-arrow-down"></i></a></p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <img src="img/pellcold.png" class="w-50" alt="Cinque Terre">
+                        <h3>La pell freda</h3>
+                        <p>Albert Sanchez Piñol</p>
+                        <p>10,25 <a href="#"><i class="fas fa-cart-arrow-down"></i></a></p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <img src="img/robot.png" class="w-50" alt="Cinque Terre">
+                        <h3>Robot. Visions</h3>
+                        <p>Isaac Asimov</p>
+                        <p>10,25 <a href="#"><i class="fas fa-cart-arrow-down"></i></a></p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <img src="img/murak.png" class="w-50" alt="Cinque Terre">
+                        <h3>Després del terratremol</h3>
+                        <p>Haruki Murakami</p>
+                        <p>10,25 <a href="#"><i class="fas fa-cart-arrow-down"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="agenda">
+            <div class="container text-center">
+                    <h1 class="mb-3">Agenda</h1>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>DIJOUS 12 de JUNY</h4>
+                                    <img src="img/donanassos.JPG" class="img-thumbnail w-50" alt="Cinque Terre">
+                                 </div>
+                                <div class="card-body">
+                                    <h3>Dona dels nassos</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero modi iusto temporibus provident voluptatibus, sunt, natus totam atque quasi ad a sed minus consequuntur, illo magnam quidem perferendis saepe assumenda..</p>
+                                    <a href="#">Llegir més...</a>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>DISSABTE 15 de JUNY<h4>
+                                    <img src="img/vagacanadenca.JPG" class="img-thumbnail w-50" alt="Cinque Terre">
+                                </div>
+                                <div class="card-body">
+                                    <h3>Ruta literària"La vaga de la Canadenca", amb Ferran Aisa</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a, veritatis soluta, quidem dicta dolore numquam blanditiis impedit nam alias quo. Temporibus odio excepturi enim!</p>
+                                    <a href="#">Llegir més...</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                     <h4>DILLUNS 17 de JUNY</4>
+                                    <img src="img/tallerescriptura.JPG" class="img-thumbnail w-50" alt="Cinque Terre">
+                                </div>
+                                <div class="card-body">
+                                    <h3>Taller d'escriptura</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, aut rerum sapiente repellendus exercitationem ullam.</p>
+                                    <a href="#">Llegir més...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end row-->
+            </div><!--end container-->
+        </section>
+
+        
+        <section id="video">
+            <div class="container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+       
+        <section id="registrat">
+            <div class="container text-center">
+                <h1>Registra't</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Avantatges</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo modi commodi fugit consequuntur, repellat deleniti totam nulla earum illum assumenda maiores velit facilis perferendis aspernatur excepturi, obcaecati laboriosam praesentium consequatur error. Dicta, ad. Reiciendis sed omnis eligendi. Perferendis ab aspernatur commodi dicta ut aut in id, adipisci est molestias sunt!</p>
+                    </div>
+                    <div class="col-md-8">
+                        <form action="" class="main-form text-left" id="myForm">
+                                <div class="form-group">
+                                    <label for="emailRegistre">Email</label>
+                                    <input type="email" name="email" id="emailRegistre" class="form-control" />
+                                    <span id="mensajeErrorEmail" class="hint"></span>
+                                </div> 
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control" />
+                                    <span id="mensajeErrorPassword1" class="hint"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Repeat Password</label>
+                                    <input type="password" name="password" id="password2" class="form-control" />
+                                    <span id="mensajeErrorPassword2" class="hint"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="provincia">Provincia</label>
+                                    <select name="provincia" id="provincia" class="form-control">
+                                        <option value="Barcelona">Barcelona</option>
+                                        <option value="Girona">Girona</option>
+                                        <option value="Lleida">Lleida</option>
+                                        <option value="Tarragona">Tarragona</option>
+                                    </select>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" id="accept-terms" class="form-check-input">
+                                    <label for="accept-terms" class="form-check-label">Accept Terms &amp; Conditions</label>
+                                </div>
+                                <button type="submit" id="enviarRegistre" class="btn btn-outline-primary">Submit</button>
+                            </form>
+                    </div>
+                </div><!--end row-->
+            </div><!-- end container-->
+        </section>
+
+
+        <!--FOOTER-->
+        <div class="jumbotron font-small " style="margin-bottom:0">
+                <div class="container-fluid text-center">
+                    <div class="row">
+                        <div class="col-md-6">
+                                <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Inici</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Categories</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Novetats</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Agenda</a>
+                                        </li>
+                                        <li class="nav-item">
+                                              <a class="nav-link" href="#">Contacte</a>
+                                        </li>
+                                    </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                                <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Proveïdors</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Clients</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Informació corporativa</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Ofertes de feina</a>
+                                        </li>
+                                        <li class="nav-item">
+                                              <a class="nav-link" href="#">Mapa web</a>
+                                        </li>
+                                    </ul>
+                        </div>
+
+                    </div><!--end row-->
+                </div><!--end container-->
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                    <a href="#inici"> ElMagatzemdeLlibres.com</a>
+                </div>
+                <!-- Copyright -->
+    
+        </div>
+    
+
+    <!--validacio forms-->
+    
+    
+    <script src="js/validacio.js"></script>
+
+</body>
+</html>
